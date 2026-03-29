@@ -1,0 +1,22 @@
+{
+  "name": "SEA Hub — Strategic Executives Agency",
+  "short_name": "SEA Hub",
+  "description": "Private content command centre for Strategic Executives Agency",
+  "start_url": "/sea-hub/",
+  "display": "standalone",
+  "background_color": "#080c14",
+  "theme_color": "#0d3c94",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "logo-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo-icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
