@@ -326,6 +326,93 @@ footer strong{color:var(--text)}
   .week-grid,.themes-grid,.team-grid,.accounts-grid,.links-grid{grid-template-columns:1fr}
   .hero-logo-wrap img{width:280px}
 }
+
+/* POST DETAIL CARDS */
+.post-detail-card {
+  background: rgba(8,12,20,.7);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.post-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.post-detail-left { display: flex; align-items: center; gap: .75rem; }
+.post-date-badge {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: white;
+  font-size: .65rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  padding: .3rem .75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+.post-type-label {
+  font-size: .7rem;
+  color: var(--blue);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.post-account-pill {
+  font-size: .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: .2rem .65rem;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  color: var(--sub);
+}
+.post-account-pill.agency { border-color: rgba(56,107,183,.4); color: var(--blue); }
+.post-account-pill.personal { border-color: rgba(201,168,76,.4); color: var(--gold); }
+.post-status {
+  font-size: .6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .2rem .65rem;
+  border-radius: 20px;
+}
+.post-status.idea { background: rgba(122,156,196,.1); color: var(--sub); border: 1px solid rgba(122,156,196,.2); }
+.post-status.draft { background: rgba(56,107,183,.15); color: var(--blue); border: 1px solid var(--border); }
+.post-status.pending { background: rgba(201,168,76,.15); color: var(--gold); border: 1px solid rgba(201,168,76,.3); }
+.post-status.approved { background: rgba(76,175,138,.15); color: #4caf8a; border: 1px solid rgba(76,175,138,.3); }
+.post-detail-body { padding: 1.25rem 1.5rem; }
+.post-title { font-size: .95rem; font-weight: 600; margin-bottom: .75rem; color: var(--white); }
+.post-caption {
+  font-size: .82rem;
+  line-height: 1.75;
+  color: var(--sub);
+  white-space: pre-line;
+  border-left: 2px solid var(--navy);
+  padding-left: 1rem;
+}
+.post-hashtags { margin-top: .5rem; color: var(--blue); font-size: .78rem; }
+.day-label {
+  font-size: .7rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--sub);
+  font-weight: 600;
+  margin: 2rem 0 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.day-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
 </style>
 
 <script>
@@ -403,97 +490,140 @@ if('serviceWorker' in navigator){
 
 <div class="divider"></div>
 
+
 <!-- CONTENT CALENDAR -->
 <section id="content">
   <div class="section-label">Content Calendar</div>
-  <h2 class="section-title">Two Weeks Ahead</h2>
-  <p class="section-sub">Current and upcoming content — ready for approval via WhatsApp.</p>
+  <h2 class="section-title">Week 7 — Creativity</h2>
+  <p class="section-sub">March 30 – April 4, 2026 · All posts ready for approval. Review each caption below.</p>
   <div class="grad-line"></div>
-  <div class="week-grid">
 
+  <div class="day-label">Monday, March 30 — Motivational Monday</div>
 
-    <!-- WEEK 7 -->
-    <div class="week-card">
-      <div class="week-badge">Current Week</div>
-      <div class="week-theme">Theme 7 — Creativity</div>
-      <div class="week-dates">March 30 – April 4, 2026</div>
-      <ul class="post-list">
-        <li class="post-item">
-          <span class="post-day">Mon Mar 30</span>
-          <div>
-            <div class="post-content">In executive search, creativity is not a soft skill. It is a strategic advantage.</div>
-            <div class="post-format">Quote Graphic · SEA Agency</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Mon Mar 30</span>
-          <div>
-            <div class="post-content">The most innovative solutions come from the most creative minds. Stop thinking inside the industry box.</div>
-            <div class="post-format">Quote Graphic · Chris Personal</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Wed Apr 1</span>
-          <div>
-            <div class="post-content">5 Ways Creative Thinking Wins Top Talent</div>
-            <div class="post-format">Carousel · SEA Agency</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Wed Apr 1</span>
-          <div>
-            <div class="post-content">Why the Best Executives Think Like Artists</div>
-            <div class="post-format">Carousel · Chris Personal</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Fri Apr 3</span>
-          <div>
-            <div class="post-content">Creativity in executive search means refusing to accept that the right person doesn't exist.</div>
-            <div class="post-format">Reflective · SEA Agency</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Fri Apr 4</span>
-          <div>
-            <div class="post-content">A placement that required thinking outside the box — my best ones always did.</div>
-            <div class="post-format">Reflective · Chris Personal</div>
-          </div>
-        </li>
-      </ul>
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Mon Mar 30</span>
+        <span class="post-type-label">Quote Graphic</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill agency">SEA Agency</span>
+        <span class="post-status idea">Pending Approval</span>
+      </div>
     </div>
+    <div class="post-detail-body">
+      <div class="post-title">Creativity: In executive search, creativity is a strategic advantage</div>
+      <div class="post-caption">In executive search, creativity is not a soft skill. It is a strategic advantage. The best talent is never obvious. Finding them requires thinking beyond the resume.
 
-    <!-- WEEK 8 -->
-    <div class="week-card">
-      <div class="week-badge" style="background:linear-gradient(135deg,#1e2d4a,#2a3f6a)">Up Next</div>
-      <div class="week-theme">Theme 8 — Strategic Partnership</div>
-      <div class="week-dates">April 6 – April 12, 2026</div>
-      <ul class="post-list">
-        <li class="post-item">
-          <span class="post-day">Mon</span>
-          <div>
-            <div class="post-content">"Great partnerships don't happen by chance — they're built with intention."</div>
-            <div class="post-format">Static Quote Graphic · SEA Agency + Chris Personal</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Wed</span>
-          <div>
-            <div class="post-content">Carousel: "What Makes a True Strategic Partnership in Talent Acquisition?"</div>
-            <div class="post-format">Informative Carousel · SEA Agency</div>
-          </div>
-        </li>
-        <li class="post-item">
-          <span class="post-day">Fri</span>
-          <div>
-            <div class="post-content">A placement that became a lasting partnership — Chris's story.</div>
-            <div class="post-format">Reflective Post · Chris Personal</div>
-          </div>
-        </li>
-      </ul>
+<span class="post-hashtags">#ExecutiveSearch #Talent #Leadership #SEA</span></div>
     </div>
-
   </div>
+
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Mon Mar 30</span>
+        <span class="post-type-label">Quote Graphic</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill personal">Chris Personal</span>
+        <span class="post-status idea">Pending Approval</span>
+      </div>
+    </div>
+    <div class="post-detail-body">
+      <div class="post-title">The most innovative solutions come from creative minds</div>
+      <div class="post-caption">The most innovative solutions come from the most creative minds. Stop thinking inside the industry box.
+
+<span class="post-hashtags">#Leadership #Solutions #Creativity</span></div>
+    </div>
+  </div>
+
+  <div class="day-label">Wednesday, April 1 — Informative Wednesday</div>
+
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Wed Apr 1</span>
+        <span class="post-type-label">Carousel</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill agency">SEA Agency</span>
+        <span class="post-status draft">Draft</span>
+      </div>
+    </div>
+    <div class="post-detail-body">
+      <div class="post-title">5 Ways Creative Thinking Wins Top Talent</div>
+      <div class="post-caption">The best candidates are not searching for a job. Finding them requires creativity. Here are 5 ways creative thinking wins top executive talent.
+
+Swipe to see how SEA approaches the search differently.
+
+<span class="post-hashtags">#ExecutiveSearch #TalentAcquisition #Leadership #SEA</span></div>
+    </div>
+  </div>
+
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Wed Apr 1</span>
+        <span class="post-type-label">Carousel</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill personal">Chris Personal</span>
+        <span class="post-status idea">Pending Approval</span>
+      </div>
+    </div>
+    <div class="post-detail-body">
+      <div class="post-title">Why the Best Executives Think Like Artists</div>
+      <div class="post-caption">After 15 years in executive search, I have seen one thing separate good leaders from great ones — creative thinking. It is not just about innovation. It is about how you see problems others miss.
+
+Here is what I have learned.
+
+<span class="post-hashtags">#Leadership #ExecutiveSearch #ChrisHaywood #C-Suite</span></div>
+    </div>
+  </div>
+
+  <div class="day-label">Friday, April 3–4 — Reflective Friday</div>
+
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Fri Apr 3</span>
+        <span class="post-type-label">Reflective Post</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill agency">SEA Agency</span>
+        <span class="post-status idea">Pending Approval</span>
+      </div>
+    </div>
+    <div class="post-detail-body">
+      <div class="post-title">What creativity means in executive search</div>
+      <div class="post-caption">Creativity in executive search does not mean being different for the sake of it. It means refusing to settle for the obvious answer when the right answer is still out there.
+
+<span class="post-hashtags">#Leadership #ExecutiveSearch #SEA</span></div>
+    </div>
+  </div>
+
+  <div class="post-detail-card">
+    <div class="post-detail-header">
+      <div class="post-detail-left">
+        <span class="post-date-badge">Fri Apr 4</span>
+        <span class="post-type-label">Reflective Post</span>
+      </div>
+      <div style="display:flex;gap:.5rem;align-items:center">
+        <span class="post-account-pill personal">Chris Personal</span>
+        <span class="post-status idea">Pending Approval</span>
+      </div>
+    </div>
+    <div class="post-detail-body">
+      <div class="post-title">A placement that required thinking outside the box</div>
+      <div class="post-caption">Some of my best placements came from a moment where I stopped following the process and started thinking creatively. This week I am reminded why that matters.
+
+What creative problem are you working through right now?
+
+<span class="post-hashtags">#Leadership #Reflection #ChrisHaywood #ExecutiveSearch</span></div>
+    </div>
+  </div>
+
 </section>
 
 <div class="divider"></div>
